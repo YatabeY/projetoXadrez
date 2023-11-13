@@ -1,6 +1,4 @@
-﻿using tabuleiro;
-
-namespace xadrez_console.tabuleiro
+﻿namespace tabuleiro
 {
     internal class Peca
     {
