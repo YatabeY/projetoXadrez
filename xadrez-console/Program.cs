@@ -13,10 +13,9 @@ namespace xadrez_console
             try
             {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
-
-                try
+                while (!partida.terminada)
                 {
-                    while (!partida.terminada)
+                    try
                     {
                         Console.Clear();
                         Tela.imprimirPartida(partida);
@@ -39,10 +38,11 @@ namespace xadrez_console
                         partida.executaMovimento(origem, destino);
 
                     }
-                }
-                catch (TabuleiroException e)
-                {
-                    Console.WriteLine(e.Message);
+                
+                    catch (TabuleiroException e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
                 }
             }
             catch (TabuleiroException e)
