@@ -13,6 +13,7 @@ namespace xadrez_console
             try
             {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
+
                 while (!partida.terminada)
                 {
                     try
@@ -43,6 +44,9 @@ namespace xadrez_console
                     {
                         Console.WriteLine(e.Message);
                     }
+
+                    Console.Clear();
+                    Tela.imprimirPartida(partida);
                 }
             }
             catch (TabuleiroException e)
